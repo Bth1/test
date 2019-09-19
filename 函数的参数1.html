@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的参数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//普通写法
+		function mul(a,b) {
+			a = a || 3;
+			b = b || 5;
+			return a * b;
+		}
+		//es6写法
+		function mul(a = 3,b = 5) {
+			return a * b;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const cxk = {
+			name : '蔡徐坤',
+			date : '2019-08-16',
+			todos : [
+				{name: '唱', completed: 	false},
+				{name: '跳', completed: true},
+				{name: 'rap', completed: true}
+			]
+		}
+
+		function renderTodos(data) {
+			return (
+				`<ul>
+				${cxk.todos.map(todo => `<li>${todo.name} ${todo.completed ? '√' : '×'}</li>`).join('')}
+				</ul>`
+			)
+		}
+
+		const template = `
+		<div class="container">
+			<div class="header">${cxk.name}</div>
+			<div class="content">${renderTodos(cxk.todos)}</div>
+			<div class="footer">${cxk.date}</div>
+		</div>
+			
+		`
+		console.log(template);
+
+
+		document.body.innerHTML = template;
+	</script>
+	<style type="text/css">
+		.container{
+			width: 500px;
+			height: 300px;
+			margin: 0 auto;
+			border: 1px #000 solid;
+			text-align: center;
+		}
+		.header{
+			font-size: 20pt;
+			font-family: sans-serif;
+			background-color: rgb(1,204,170);
+			height: 80px;
+			line-height: 80px;
+		}
+		.content{
+			font-size: 20pt;
+		}
+		.footer{
+			font-size: 20pt;
+			background-color: rgb(1,204,170);
+			height: 62px;
+			line-height: 62px;
+		}
+	</style>
+</body>
+</html>

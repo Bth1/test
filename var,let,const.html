@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// for (var i = 0; i < 10; i++) {
+		// 	console.log(i);
+		// 	setTimeout(function(){
+		// 		console.log(`i:${i}`);
+		// 	},1000) 
+		// }//for循环执行完之后，i=10。原因：var声明的是全局变量i，所以执行之后是10
+		for (let i = 0; i < 10; i++) {
+			console.log(i);
+			setTimeout(function(){
+				console.log(`i:${i}`);
+			},1000)
+		}
+		// for (const i = 0; i < 10; i++) {
+		// 	console.log(i);
+		// 	setTimeout(function(){
+		// 		console.log(`i:${i}`);
+		// 	},1000)
+		// }
+	</script>
+</body>
+</html>

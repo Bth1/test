@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的参数</title>
+	<!--
+	函数的参数
+	1 参数扩展/展开
+	2 默认参数
+
+
+	1.1 参数扩展
+		function show(a,b, ...args){}   
+		* args是一个数组，随便取名，但是必须是最后一个
+	1.2 展开数组 
+		展开后的效果，跟直接把数组的内容写在这一样
+	-->
+</head>
+<body>
+	<script type="text/javascript">
+		//参数扩展
+		function show(a,b, ...args) {
+			alert(a);
+			alert(b);
+			alert(args);
+		}
+
+		show(2,34,214,24,53);
+
+		//展开数组
+		function fish(...args){//...args = (8,3) 
+			fn(...args);//等于 fn(8,3)
+		}
+
+		function fn(a,b){
+			alert(a+b);
+		}
+
+		fish(8,3);
+	</script>
+</body>
+</html>

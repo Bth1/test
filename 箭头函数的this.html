@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数this</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*const cxk = {
+			name: 'cxk',
+			hobbies: ['Singing','Dancing','Raping'],
+			printHobbies:function() {
+				//console.log(this);//指向cxk
+				let that = this;
+				this.hobbies.map(function(hobby) {
+					// console.log(this); //指向window
+					console.log(`${that.name} loves ${hobby}`);
+				})
+			}
+		}*/
+		const cxk = {
+			name: 'cxk',
+			hobbies: ['Singing','Dancing','Raping'],
+			printHobbies:function() {
+				this.hobbies.map((hobby) => { //用箭头函数替代，箭头函数没有自己的this值，它的this值继承的是父级作用域（也就是本行的this）
+					console.log(`${this.name} loves ${hobby}`);
+				})
+			}
+		}
+		cxk.printHobbies();
+	</script>
+</body>
+</html>
